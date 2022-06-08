@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -20,15 +27,27 @@
                #2b947100 100%
               )`,
             },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
           },
         },
       };
     </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
     <title>Deepsource Clone</title>
   </head>
-  <body class="bg-dark">
+  <body class="bg-dark font-inter">
     <nav
-      class="flex justify-center items-center gap-16 h-16 relative z-10 text-white text-lg font-semibold"
+      class="flex justify-center items-center gap-16 h-16 text-white text-lg font-medium"
     >
       <img class="h-7 cursor-pointer" src="./image/logo.svg" />
       <ul class="flex gap-8">
@@ -46,8 +65,28 @@
         </li>
       </ul>
     </nav>
+    <section class="flex justify-center my-36">
+      <div class="hero-text text-center">
+        <h2 class="text-7xl text-white font-bold">
+          Shift-left your code <br />
+          quality and security
+        </h2>
+        <p class="mt-6 text-white text-xl">
+          DeepSource is a modern static analysis platform, built for engineering
+          teams who <br />
+          move fast and don't break things.
+        </p>
+      </div>
+    </section>
+    <section>
+      <img
+        class="hero-image w-9/12 mx-auto"
+        src="./image/dashboard.webp"
+        alt=""
+      />
+    </section>
     <div
-      class="h-screen w-full bg-radial-green absolute top-0 left-0 z-0"
+      class="h-[200vh] w-full bg-radial-green absolute top-0 left-0 z-[-1]"
     ></div>
   </body>
 </html>
