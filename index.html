@@ -5,35 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#16181d",
+              green: "#33cb9a",
+            },
+            backgroundImage: {
+              "radial-green": `radial-gradient(
+               55vw 55vw at 0 0,
+               #2b94718c 0,
+               #2b947100 100%
+              )`,
+            },
+          },
+        },
+      };
+    </script>
     <title>Deepsource Clone</title>
   </head>
-  <body class="bg-[#16181d]">
+  <body class="bg-dark">
     <nav
       class="flex justify-center items-center gap-16 h-16 relative z-10 text-white text-xl text-bold"
     >
-      <img class="h-7" src="./image/logo.svg" />
+      <img class="h-7 cursor-pointer" src="./image/logo.svg" />
       <ul class="flex gap-10">
-        <li>Products</li>
-        <li>Enterprise</li>
-        <li>Pricing</li>
-        <li>Resources</li>
-        <li>Company</li>
-        <li>Jobs</li>
+        <li class="cursor-pointer">Products</li>
+        <li class="cursor-pointer">Enterprise</li>
+        <li class="cursor-pointer">Pricing</li>
+        <li class="cursor-pointer">Resources</li>
+        <li class="cursor-pointer">Company</li>
+        <li class="cursor-pointer">Jobs</li>
       </ul>
-      <ul class="flex gap-10">
-        <li>Log in</li>
-        <li>Sign up</li>
+      <ul class="flex items-center gap-10">
+        <li class="cursor-pointer">Log in</li>
+        <li class="cursor-pointer bg-green px-2 py-1 rounded-sm">Sign up</li>
       </ul>
     </nav>
     <div
-      style="
-        background-image: radial-gradient(
-          55vw 55vw at 0 0,
-          #2b94718c 0,
-          #2b947100 100%
-        );
-      "
-      class="h-screen w-full absolute top-0 left-0 z-0"
+      class="h-screen w-full bg-radial-green absolute top-0 left-0 z-0"
     ></div>
   </body>
 </html>
