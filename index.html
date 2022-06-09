@@ -19,6 +19,7 @@
             colors: {
               dark: "#16181d",
               green: "#33cb9a",
+              "green-10": "#33cb9b2e",
             },
             backgroundImage: {
               "radial-green": `radial-gradient(
@@ -35,6 +36,10 @@
       };
     </script>
     <script
+      src="https://kit.fontawesome.com/5e8f5bcd41.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
       defer
     ></script>
@@ -45,7 +50,9 @@
     <script src="script.js" defer></script>
     <title>Deepsource Clone</title>
   </head>
-  <body class="bg-dark font-inter">
+  <body class="main-body bg-dark font-inter">
+    <!-- Navbar -->
+
     <header class="sticky top-0 z-20">
       <nav
         class="navbar flex justify-center items-center relative z-50 gap-16 h-16 text-white text-lg font-medium"
@@ -70,8 +77,22 @@
         class="navbar-background bg-black bg-opacity-50 backdrop-blur-md h-16 w-full absolute top-0"
       ></div>
     </header>
-    <section class="flex justify-center my-36 relative z-10">
+
+    <!-- Hero Text  -->
+
+    <section class="flex justify-center my-32 relative z-10">
       <div class="hero-text text-center">
+        <div class="new-feature mb-10 flex justify-center">
+          <button
+            class="bg-green-10 p-2 flex justify-center items-center rounded-full text-white font-semibold hover:brightness-150"
+          >
+            <span class="bg-green text-dark p-1 px-2 rounded-full text-sm"
+              >NEW</span
+            >
+            <p class="mx-2">We're now SOC 2 Type II compliant</p>
+            <i class="fa-solid fa-chevron-right mr-2"></i>
+          </button>
+        </div>
         <h2 class="text-7xl text-white font-bold">
           Shift-left your code <br />
           quality and security
@@ -81,8 +102,25 @@
           teams who <br />
           move fast and don't break things.
         </p>
+        <div class="mt-10">
+          <button
+            class="bg-green py-2 mr-4 px-4 transition rounded-sm font-medium hover:brightness-75"
+          >
+            <i class="fa-solid fa-play mr-2"></i>
+            Start analyzing your code
+          </button>
+          <button
+            class="py-2 px-4 ml-4 text-green rounded-sm transition hover:bg-white hover:bg-opacity-10"
+          >
+            <i class="fa-solid fa-calendar mr-2"></i>
+            Request demo
+          </button>
+        </div>
       </div>
     </section>
+
+    <!-- Hero Image -->
+
     <section class="hero-image-section relative z-10">
       <img
         class="hero-image w-9/12 mx-auto"

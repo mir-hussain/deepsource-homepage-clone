@@ -1,5 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const tl = gsap.timeline();
+
+tl.from(".main-body", {
+  opacity: 0,
+  duration: 1.5,
+}).from(".new-feature", {
+  opacity: 0,
+  y: -50,
+  duration: 1,
+  ease: "bounce",
+});
+
 gsap.from(".navbar-background", {
   opacity: 0,
   scrollTrigger: {
@@ -29,7 +41,6 @@ gsap.to(".hero-image", {
     trigger: ".hero-image",
     start: "top bottom",
     end: "bottom bottom",
-    markers: true,
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },

@@ -1,3 +1,4 @@
 .hero-image {
-  transform: perspective(800px) rotateX(40deg);
+  transform: perspective(800px) rotateX(30deg);
+  /* color: #33cb9b2e; */
 }
