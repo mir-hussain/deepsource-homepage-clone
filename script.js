@@ -4,7 +4,6 @@ gsap.from(".navbar-background", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".navbar-background",
-    markers: true,
     start: "top top",
     toggleActions: "restart pause reverse pause",
     scrub: 1.5,
@@ -24,6 +23,14 @@ gsap.to(".hero-text", {
   },
 });
 
-gsap.from(".hero-image", {
-  transform: "perspective(800px) rotateX(20deg)",
+gsap.to(".hero-image", {
+  transform: "perspective(800px) rotateX(0deg)",
+  scrollTrigger: {
+    trigger: ".hero-image",
+    start: "top bottom",
+    end: "bottom bottom",
+    markers: true,
+    toggleActions: "restart pause reverse pause",
+    scrub: 1,
+  },
 });
